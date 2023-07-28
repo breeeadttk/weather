@@ -122,7 +122,7 @@ const WeatherCity: React.FC<WeatherCityProps> = ({ city }) => {
         </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'flex-start', my: 2 }}>
               {weatherData.forecast.forecastday[0].hour.slice(0, 3).map((hour) => (
-                <Box>
+                <Box key={hour.time}>
                   <Typography variant="body2">
                     {new Date(hour.time_epoch * 1000).toLocaleTimeString([], {
                       hour: '2-digit',
