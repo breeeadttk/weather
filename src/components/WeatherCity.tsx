@@ -30,6 +30,7 @@ interface WeatherData {
     forecastday: {
       date: string;
       hour: {
+        time_epoch: number;
         time: string;
         temp_c: number;
       }[];
@@ -68,7 +69,7 @@ const WeatherCity: React.FC<WeatherCityProps> = ({ city }) => {
     return <div>Loading...</div>;
   }
 
-  const getTemperatureIcon = (temperature: number, size:string = 'large') => {
+  const getTemperatureIcon = (temperature: number,size: 'small' | 'inherit' | 'medium' | 'large' = 'large') => {
     switch (true) {
 
       case temperature > 20:
