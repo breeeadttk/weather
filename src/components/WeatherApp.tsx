@@ -1,7 +1,8 @@
 
 'use client'
-
 import { useState } from 'react';
+
+// Components
 import AutocompleteComponent from './AutocompleteCityList';
 import WeatherCity from './WeatherCity';
 import Box from '@mui/material/Box';
